@@ -1,0 +1,13 @@
+package com.codewithamit.dagger2
+
+import android.util.Log
+import javax.inject.Inject
+
+class FirebaseUserRepository @Inject constructor(val analyticalService: AnalyticalService) :
+    UserRepository {
+    override fun saveUser(email: String, password: String) {
+        Log.d(TAG, "saveUser: User saved to Firebase Store")
+    }
+
+
+}
